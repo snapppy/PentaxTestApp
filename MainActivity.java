@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             protected void onPostExecute(String result) {
                 deviceConnectText.setText(result);
                 if (cameraDevice != null) {
-                    batteryLifeText.setText("Battery Level %" + cameraDevice.getStatus().getBatteryLevel());
+                    batteryLifeText.setText("Battery Level at " + cameraDevice.getStatus().getBatteryLevel() + "%");
                 }
             }
         }.execute();
